@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     e.preventDefault()
     btnClicked()
   })
-  creteUsers()
+  creteUsers(userDate)
 })
 
 function btnClicked() {
@@ -20,14 +20,14 @@ function btnClicked() {
   })
   form.reset()
   console.log(userDate);
-  creteUsers()
+  creteUsers(userDate)
   getLocalStorage()
 }
 
 
-function creteUsers() {
+function creteUsers(arr) {
   tBody.innerHTML = ""
-  userDate.forEach((item, i) => {
+  arr.forEach((item, i) => {
     tBody.innerHTML += `
       <tr>
         <td class="border text-center">${i + 1}</td>
@@ -47,8 +47,20 @@ function getLocalStorage() {
   localStorage.setItem('user', JSON.stringify(userDate))
 }
 
+
+// Search
+let search = document.getElementById('search')
+let new_users
+search.addEventListener('input', () => {
+  new_users = userDate.filter((item, i) => item.first_name.toLowerCase().includes(search.value.toLowerCase()))
+  getLocalStorage()
+  creteUsers(new_users)
+})
+
+
 function deleteUser(i) {
   userDate.splice(i, 1)
-  creteUsers()
+  creteUsers(userDate)
   getLocalStorage()
 }
+
