@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="w-[90%] m-auto pt-8 flex gap-8 items-start">
+    <div class="w-1/4">
+      <form id="form" class="flex flex-col gap-2">
+        <input class="border text-lg px-2 py-1 rounded focus:border-blue-600 outline-none" type="text"
+          placeholder="First name" name="first_name">
+        <input class="border text-lg px-2 py-1 rounded focus:border-blue-600 outline-none" type="text"
+          placeholder="Last name" name="last_name">
+        <input class="border text-lg px-2 py-1 rounded focus:border-blue-600 outline-none" type="number"
+          placeholder="Age" name="age">
+        <input class="border text-lg px-2 py-1 rounded focus:border-blue-600 outline-none" type="email"
+          placeholder="Email" name="email">
+        <button class="bg-blue-600 py-1 text-2xl text-white rounded" type="submit">Submit</button>
+      </form>
+    </div>
+    <table class="w-3/4">
+      <thead>
+        <tr>
+          <th class="border">T/H</th>
+          <th class="border">First name</th>
+          <th class="border">Last name</th>
+          <th class="border">Age</th>
+          <th class="border">Email</th>
+          <td class="h-8 w-8 opacity-0 bg-gray-200 flex items-center justify-center ml-2 my-0.5 cursor-pointer rounded">
+            <i class="fa-solid fa-trash"></i>
+          </td>
+        </tr>
+      </thead>
+      <tbody id="tbody">
+        <tr>
+          <td class="border text-center">T/H</td>
+          <td class="border text-center">First name</td>
+          <td class="border text-center">Last name</td>
+          <td class="border text-center">Age</td>
+          <td class="border text-center">Email</td>
+          <td class="h-8 w-8 bg-gray-200 flex items-center justify-center ml-2 my-0.5 cursor-pointer rounded">
+            <i class="fa-solid fa-trash"></i>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="./app.js"></script>
+</body>
+
+</html>
